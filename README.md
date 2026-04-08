@@ -18,7 +18,7 @@ Drop in an image, extract a color palette, and copy hex codes instantly in your 
 - LocalStorage for manual theme persistence
 
 ## Setup / Run Locally
-- Open `D:\Projects\github-projects\palette-generator\index.html` directly in a browser (`file://...`).
+- Open `C:\Users\KRSBK\Documents\Projects\github-projects\palette-generator\index.html` directly in a browser (`file://...`).
 - No install step or build step is required.
 
 ## Tests
@@ -27,7 +27,7 @@ No automated test suite is configured yet. Verification is manual in browser and
 ## Deployment Notes
 - Production deploys are served from Vercel at `https://shinbum-palette-generator.vercel.app/`.
 - Pushes to `main` trigger automatic production deploys through the Vercel Git integration.
-- Keep relative asset paths so the page works when opened locally and when published on Vercel.
+- Keep relative asset paths so the page works locally, during optional GitHub Pages testing, and on Vercel production.
 - No environment variables are required.
 
 ## Theme / UI Notes
@@ -35,6 +35,12 @@ No automated test suite is configured yet. Verification is manual in browser and
 - Shared theme assets are in `shared/tokens.css`, `shared/darkmode.css`, and `shared/darkmode.js`.
 - Manual theme choice is stored in `localStorage` under `northline-theme`.
 - Page styles in `css/style.css` consume semantic variables and avoid hard-coded component colors.
+
+
+## Branding / Theme Notes
+- This project uses the Northline product-family shell language for its public-facing page.
+- First visit defaults to light mode; dark mode is an explicit user choice and persists locally.
+- Shared shell decisions should stay consistent with the current Northline header/topbar, title scale, spacing, and surface model.
 
 ## Project Layout
 - `index.html` static app entrypoint

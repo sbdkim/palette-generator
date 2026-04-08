@@ -1,5 +1,5 @@
 :root {
-  --app-max-width: 940px;
+  --app-max-width: var(--northline-shell-max-width);
 }
 
 body {
@@ -7,13 +7,18 @@ body {
 }
 
 .app-shell {
-  width: min(var(--app-max-width), 100% - (var(--space-5) * 2));
+  width: min(var(--app-max-width), calc(100% - (var(--northline-shell-padding) * 2)));
   margin: 0 auto;
-  padding: calc(var(--space-12) + var(--space-4)) 0 var(--space-10);
+  padding: var(--northline-shell-padding) 0 var(--space-10);
 }
 
 .app-header {
   margin-bottom: var(--space-8);
+  padding: var(--northline-shell-padding-block) var(--northline-shell-padding-inline);
+  border: 1px solid var(--color-border-subtle-ui);
+  border-radius: var(--northline-shell-radius);
+  background: var(--northline-shell-surface);
+  box-shadow: var(--color-shadow);
 }
 
 .suite-label {
@@ -28,15 +33,16 @@ body {
 h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  line-height: var(--line-height-tight);
+  font-size: var(--northline-title-size);
+  line-height: 0.98;
   font-weight: var(--font-weight-bold);
+  max-width: var(--northline-title-max-width);
 }
 
 .subtitle {
   margin: var(--space-3) 0 0;
   color: var(--color-text-muted);
-  font-size: var(--font-size-md);
+  font-size: var(--northline-subtitle-size);
   max-width: 58ch;
 }
 

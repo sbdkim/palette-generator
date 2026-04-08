@@ -1,6 +1,6 @@
 # Project Agent Guide
 
-This repo is a static GitHub Pages app for extracting dominant image colors in-browser with Canvas APIs.
+This repo is a static browser app for extracting dominant image colors in-browser with Canvas APIs.
 
 ## Working Agreement
 
@@ -10,6 +10,12 @@ This repo is a static GitHub Pages app for extracting dominant image colors in-b
   - `js/app.js` for DOM orchestration and user interactions
 - Update `tasks/current-plan.md` for non-trivial changes and include verification evidence before marking done.
 - Use `tasks/todo.md` for follow-up improvements and `tasks/lessons.md` only for reusable prevention rules.
+
+## Deployment Expectations
+
+- Treat GitHub Pages as an optional testing deploy only if public path validation is useful.
+- Treat Vercel as the production deployment target for the branded URL.
+- Keep relative asset paths compatible with local use and optional Pages testing without describing Pages as the steady-state live surface.
 
 ## Frontend Defaults
 
