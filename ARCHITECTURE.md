@@ -49,3 +49,4 @@ Palette Generator is a single-page static web app. Users upload an image, the ap
 ## Change Notes
 
 - 2026-03-22: Initial scaffold created with Northline theming, median-cut quantization, swatch copy, and PNG export.
+- 2026-04-08: Deployment target moved from GitHub Pages assumptions to static Vercel hosting.

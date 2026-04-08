@@ -3,7 +3,7 @@
 Drop in an image, extract a color palette, and copy hex codes instantly in your browser.
 
 ## Live Demo
-Deployment target is GitHub Pages. If not yet published, open `index.html` locally for the full experience.
+[https://shinbum-palette-generator.vercel.app/](https://shinbum-palette-generator.vercel.app/)
 
 ## Key Features
 - Drag-and-drop image upload or click-to-browse file input (`image/*`)
@@ -25,8 +25,9 @@ Deployment target is GitHub Pages. If not yet published, open `index.html` local
 No automated test suite is configured yet. Verification is manual in browser and recorded in `tasks/current-plan.md`.
 
 ## Deployment Notes
-- Designed for static hosting on GitHub Pages.
-- Keep relative asset paths so the page works under repository subpaths.
+- Production deploys are served from Vercel at `https://shinbum-palette-generator.vercel.app/`.
+- Pushes to `main` trigger automatic production deploys through the Vercel Git integration.
+- Keep relative asset paths so the page works when opened locally and when published on Vercel.
 - No environment variables are required.
 
 ## Theme / UI Notes

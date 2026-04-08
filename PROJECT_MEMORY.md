@@ -4,7 +4,7 @@ Use this file to store stable context that future work should not have to redisc
 
 ## Project Summary
 
-Palette Generator is a static GitHub Pages Canvas showcase that extracts dominant colors from user-provided images, displays hex swatches, supports clipboard copy, and exports the palette as a PNG strip.
+Palette Generator is a static Vercel-hosted Canvas showcase that extracts dominant colors from user-provided images, displays hex swatches, supports clipboard copy, and exports the palette as a PNG strip.
 
 ## Current Priorities
 
@@ -22,6 +22,8 @@ Palette Generator is a static GitHub Pages Canvas showcase that extracts dominan
 - Decision: Use median-cut quantization in `js/quantize.js` with pure helper functions.
 - Decision: Cache sampled pixels after upload and regenerate palette on size changes without rereading files.
 - Decision: Use Northline shared theme files from `bg-remover` as the baseline.
+- Decision: Keep deployment fully static on Vercel with repo-root publishing.
+  Reason: Preserves the no-build workflow while allowing branded URLs and Git-linked deploys.
 
 ## Conventions
 

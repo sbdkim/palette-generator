@@ -6,48 +6,44 @@ Do not create or update this file for tiny, low-risk edits.
 
 ## Title
 
-Scaffold `palette-generator` static GitHub Pages app.
+Migrate `palette-generator` from GitHub Pages to Vercel.
 
 ## Goal
 
-Create a fully functional single-page Canvas palette extractor with Northline theming, documentation scaffold, and verification evidence.
+Keep the existing browser-only palette extractor intact while moving production hosting to Vercel with a branded URL, Git-triggered auto deploys, and repo/docs alignment.
 
 ## Success Criteria
 
-- Functional upload/drop pipeline, palette extraction, copy, and PNG download.
-- Theme toggle works with persisted `northline-theme` preference.
-- Project docs are populated and aligned with workspace templates.
+- Production site is available at `https://shinbum-palette-generator.vercel.app/`.
+- Pushes to `main` trigger automatic Vercel production deploys.
+- Repo docs reflect Vercel as the live host.
+- GitHub Pages is no longer the public source of truth.
 
 ## Constraints And Assumptions
 
 - Constraint: browser-only runtime, no backend or external image APIs.
-- Constraint: no build tooling; app must run directly from `index.html`.
-- Assumption: modern browser supports Canvas and Clipboard APIs.
+- Constraint: app continues to run directly from repo-root static files.
+- Assumption: Vercel can serve the repo root without any custom build step.
 
 ## Implementation Approach
 
-Copy Northline shared theme files from `bg-remover`, scaffold static HTML/CSS/JS modules, implement median-cut quantization in a pure utility module, and wire UI interactions in `app.js`. Fill project docs from templates and record manual verification results.
+Keep the app static, add lightweight Vercel project metadata hygiene, update docs/memory, deploy from repo root, assign the branded alias, verify Git auto deploy, then make the GitHub repo private once the Vercel path is stable.
 
 ## Checklist
 
 - [x] Confirm current behavior and relevant context
-- [x] Implement the change
-- [x] Verify the result with the strongest reasonable checks
-- [x] Update docs or memory files if needed
+- [x] Update project docs for Vercel hosting
+- [ ] Deploy to Vercel and assign branded alias
+- [ ] Verify Git-triggered production deploy
+- [ ] Make GitHub repo private after verification
 
 ## Verification Plan
 
-- Open `index.html` locally and confirm no console errors.
-- Validate drag/drop + file input, palette size regeneration, copy feedback, and PNG export.
-- Verify light/dark toggle behavior and persisted theme key.
-- Confirm `css/style.css` uses CSS variables instead of hardcoded colors.
+- Open the branded Vercel URL and confirm the app loads.
+- Confirm assets resolve from repo root with no missing static files.
+- Push a migration commit to `main` and verify Vercel records a Git-sourced production deploy.
+- Recheck the repo visibility after deployment is healthy.
 
 ## Outcome Notes
 
-Implemented full scaffold, app logic, shared theme integration, and repo docs. Verification completed with:
-- `node --check` on `js/app.js` and `js/quantize.js`
-- regex check confirming no hardcoded hex literals in `css/style.css`
-- module sanity test of median-cut output using Node ESM import
-- file tree validation for required scaffold paths
-
-Browser automation smoke checks were attempted with `npx @playwright/cli`, but the CLI session timed out on snapshot/eval in this environment. Manual in-browser verification is still recommended to confirm drag/drop and clipboard/download interactions end-to-end.
+Migration is in progress. Static hosting assumptions remain unchanged; only the production delivery path is moving from GitHub Pages to Vercel.
