@@ -33,9 +33,9 @@ Keep the app static, add lightweight Vercel project metadata hygiene, update doc
 
 - [x] Confirm current behavior and relevant context
 - [x] Update project docs for Vercel hosting
-- [ ] Deploy to Vercel and assign branded alias
-- [ ] Verify Git-triggered production deploy
-- [ ] Make GitHub repo private after verification
+- [x] Deploy to Vercel and assign branded alias
+- [x] Verify Git-triggered production deploy
+- [x] Make GitHub repo private after verification
 
 ## Verification Plan
 
@@ -46,4 +46,4 @@ Keep the app static, add lightweight Vercel project metadata hygiene, update doc
 
 ## Outcome Notes
 
-Migration is in progress. Static hosting assumptions remain unchanged; only the production delivery path is moving from GitHub Pages to Vercel.
+Migration completed on 2026-04-08. The app remains a browser-only static project published from repo root, with production now served from `https://shinbum-palette-generator.vercel.app/`. Git pushes to `main` trigger Vercel production deploys, and the GitHub repo was made private after deployment health was confirmed.
