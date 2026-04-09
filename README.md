@@ -31,7 +31,7 @@ No automated test suite is configured yet. Verification is manual in browser and
 - No environment variables are required.
 
 ## Theme / UI Notes
-- Theme defaults to system preference (`prefers-color-scheme`) and supports manual override.
+- First visit defaults to light mode and the manual override persists.
 - Shared theme assets are in `shared/tokens.css`, `shared/darkmode.css`, and `shared/darkmode.js`.
 - Manual theme choice is stored in `localStorage` under `northline-theme`.
 - Page styles in `css/style.css` consume semantic variables and avoid hard-coded component colors.
@@ -40,7 +40,7 @@ No automated test suite is configured yet. Verification is manual in browser and
 ## Branding / Theme Notes
 - This project uses the Northline product-family shell language for its public-facing page.
 - First visit defaults to light mode; dark mode is an explicit user choice and persists locally.
-- Shared shell decisions should stay consistent with the current Northline header/topbar, title scale, spacing, and surface model.
+- Shared shell decisions should stay consistent with the current Northline single `hero/header-panel`, `h1` scale, `hero-copy`, spacing, and surface model.
 
 ## Project Layout
 - `index.html` static app entrypoint
