@@ -20,9 +20,9 @@
     }
   }
 
-  function getPreferredTheme() {
-    return media && media.matches ? 'dark' : 'light';
-  }
+function getPreferredTheme() {
+  return 'light';
+}
 
   function updateThemeColor(theme) {
     if (themeColorMeta) {
