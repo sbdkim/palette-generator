@@ -1,5 +1,5 @@
 :root {
-  --app-max-width: var(--northline-shell-max-width);
+  --app-max-width: var(--northline-shell-max-width, 1224px);
 }
 
 body {
@@ -7,9 +7,9 @@ body {
 }
 
 .app-shell {
-  width: min(var(--app-max-width), calc(100% - (var(--northline-shell-padding) * 2)));
+  width: min(var(--app-max-width), calc(100% - (var(--northline-shell-padding, 28px) * 2)));
   margin: 0 auto;
-  padding: var(--northline-shell-padding) 0 var(--space-10);
+  padding: var(--northline-shell-padding, 28px) 0 var(--space-10);
 }
 
 .topbar {
@@ -20,8 +20,8 @@ body {
   margin: 0 0 32px;
   padding: 32px;
   border: 1px solid var(--color-border-subtle-ui);
-  border-radius: var(--northline-shell-radius);
-  background: rgba(255, 253, 248, 0.92);
+  border-radius: var(--northline-shell-radius, 24px);
+  background: color(srgb 1 0.992157 0.972549 / 0.92);
   box-shadow: var(--color-shadow);
   color: #1f2933;
   font: 15px/1.6 Manrope, sans-serif;
@@ -285,7 +285,7 @@ h2 {
 @media (max-width: 640px) {
   .app-shell {
     width: min(var(--app-max-width), 100% - (var(--space-4) * 2));
-    padding-top: calc(var(--space-12) + var(--space-8));
+    padding-top: 16px;
   }
 
   .topbar {
