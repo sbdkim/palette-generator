@@ -12,7 +12,7 @@ body {
   padding: var(--northline-shell-padding, 28px) 0 var(--space-10);
 }
 
-.topbar {
+.hero-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--northline-shell-gap);
@@ -27,7 +27,7 @@ body {
   font: 15px/1.6 Manrope, sans-serif;
 }
 
-.title-block {
+.hero-main {
   min-width: 0;
 }
 
@@ -40,7 +40,7 @@ body {
   color: var(--color-brand-secondary);
 }
 
-.topbar h1 {
+.hero-panel h1 {
   margin: 0;
   font-family: var(--font-display);
   font-size: var(--northline-title-size, clamp(2.75rem, 6vw, 3.7rem));
@@ -49,7 +49,7 @@ body {
   max-width: var(--northline-title-max-width);
 }
 
-.subtitle {
+.hero-copy {
   margin: var(--space-3) 0 0;
   color: var(--color-text-muted);
   font-size: var(--northline-subtitle-size, 1.05rem);
@@ -57,12 +57,12 @@ body {
   line-height: 1.6;
 }
 
-.actions {
+.hero-actions {
   display: flex;
   align-items: start;
 }
 
-.tool-meta {
+.hero-note {
   min-width: 250px;
   max-width: 280px;
   padding: 14px 16px;
@@ -72,7 +72,7 @@ body {
   box-shadow: var(--color-shadow-soft);
 }
 
-.tool-meta-label {
+.hero-note-label {
   margin: 0 0 8px;
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
@@ -81,7 +81,7 @@ body {
   color: var(--color-brand-secondary);
 }
 
-.tool-meta-strong {
+.hero-note strong {
   margin: 0;
   color: var(--color-text-primary);
   font-family: var(--font-display);
@@ -89,7 +89,7 @@ body {
   font-weight: 600;
 }
 
-.tool-meta-copy {
+.hero-note p:last-child {
   margin: 8px 0 0;
   line-height: 1.55;
   color: var(--color-text-secondary);
@@ -288,7 +288,7 @@ h2 {
     padding-top: 16px;
   }
 
-  .topbar {
+  .hero-panel {
     grid-template-columns: 1fr;
   }
 
@@ -306,3 +306,4 @@ h2 {
     padding: var(--space-6);
   }
 }
+
