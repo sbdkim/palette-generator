@@ -12,11 +12,11 @@ body {
   padding: var(--northline-shell-padding) 0 var(--space-10);
 }
 
-.hero-panel {
+.topbar {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(250px, 0.92fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--northline-shell-gap);
-  align-items: end;
+  align-items: start;
   margin: 0 0 32px;
   padding: 32px;
   border: 1px solid var(--color-border-subtle-ui);
@@ -25,6 +25,10 @@ body {
   box-shadow: var(--color-shadow);
   color: #1f2933;
   font: 15px/1.6 Manrope, sans-serif;
+}
+
+.title-block {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -36,7 +40,7 @@ body {
   color: var(--color-brand-secondary);
 }
 
-h1 {
+.topbar h1 {
   margin: 0;
   font-family: var(--font-display);
   font-size: var(--northline-title-size, clamp(2.75rem, 6vw, 3.7rem));
@@ -45,7 +49,7 @@ h1 {
   max-width: var(--northline-title-max-width);
 }
 
-.hero-copy {
+.subtitle {
   margin: var(--space-3) 0 0;
   color: var(--color-text-muted);
   font-size: var(--northline-subtitle-size, 1.05rem);
@@ -53,34 +57,43 @@ h1 {
   line-height: 1.6;
 }
 
-.hero-note {
-  display: grid;
-  gap: var(--space-3);
-  padding: var(--space-5);
-  border-radius: calc(var(--radius-lg) + var(--space-2));
-  background: linear-gradient(180deg, var(--color-brand-secondary) 0%, var(--color-brand-primary) 100%);
-  color: var(--color-text-inverse);
+.actions {
+  display: flex;
+  align-items: start;
 }
 
-.hero-note-label {
-  margin: 0;
+.tool-meta {
+  min-width: 250px;
+  max-width: 280px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border-subtle-ui);
+  border-radius: calc(var(--radius-lg) + 2px);
+  background: color-mix(in srgb, var(--color-surface) 96%, transparent);
+  box-shadow: var(--color-shadow-soft);
+}
+
+.tool-meta-label {
+  margin: 0 0 8px;
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-text-inverse) 82%, transparent);
+  color: var(--color-brand-secondary);
 }
 
-.hero-note strong {
-  display: block;
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-}
-
-.hero-note p:last-child {
+.tool-meta-strong {
   margin: 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tool-meta-copy {
+  margin: 8px 0 0;
   line-height: 1.55;
-  color: color-mix(in srgb, var(--color-text-inverse) 88%, transparent);
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
 }
 
 .controls {
@@ -275,7 +288,7 @@ h2 {
     padding-top: calc(var(--space-12) + var(--space-8));
   }
 
-  .hero-panel {
+  .topbar {
     grid-template-columns: 1fr;
   }
 
